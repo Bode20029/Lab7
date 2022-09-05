@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+    span {
+        cursor: pointer;
+    }
+</style>
+<script>
+
+
+function decrease() {
+    txt = document.getElementById('p1');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize - 5) + 'px';
+}
+function increase() {
+    txt = document.getElementById('p1');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + 5) + 'px';
+}
+
+
+
+</script>
+</head>
+<body>
+<h1>
+<span onclick="decrease()">‐</span> |
+<span onclick="increase()">+</span>
+</h1>
+<p id="p1">
+If you're leavin', will you take me with you? I'm
+tired of talkin' on my phone There is one thing I can
+never give you My heart will never be your home
+</p>
+</body>
+</html>
